@@ -1,0 +1,43 @@
+<meta charset=UTF-8>
+<div class="container">
+	<form action="/habitacion/c" method="get">
+		<input type="submit" value="Nueva" />
+	</form>
+	<form action="/">
+		<input type="submit" value="Volver" />
+	</form>
+
+	<h1>Listado de habitaciones</h1>
+
+	<table border="1">
+		<tr>
+			<th>Número de habitación</th>
+			<th>Número de camas</th>
+		</tr>
+
+		<tr th:each="habitacion:${habitaciones}">
+			<td th:text="${habitacion.numHabitacion}"></td>
+			<td th:text="${habitacion.numCamas}"></td>
+			<td>
+
+				<form action="/habitacion/d">
+					<input type="hidden" name="idHabitacion" th:value="${habitacion.id}" />
+					<button onclick="submit()">
+						<img src="/img/icons/basura.png" height="20" width="20">
+					</button>
+				</form>
+
+				<form action="/habitacion/u">
+					<input type="hidden" name="idHabitacion" th:value="${habitacion.id}" />
+					<button onclick="submit()">
+						<img src="/img/icons/lapiz.png" height="20" width="20">
+					</button>
+				</form>
+
+			</td>
+		</tr>
+
+
+	</table>
+
+</div>

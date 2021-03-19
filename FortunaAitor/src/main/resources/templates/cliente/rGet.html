@@ -1,0 +1,43 @@
+<meta charset=UTF-8>
+<div class="container">
+	<form action="/cliente/c" method="get">
+		<input type="submit" value="Nuevo" />
+	</form>
+	<form action="/">
+		<input type="submit" value="Volver" />
+	</form>
+
+	<h1>Listado de clientes</h1>
+
+	<table border="1">
+		<tr>
+			<th>DNI</th>
+			<th>Nombre</th>
+		</tr>
+
+		<tr th:each="cliente:${clientes}">
+			<td th:text="${cliente.dni}"></td>
+			<td th:text="${cliente.nombre}"></td>
+			<td>
+
+				<form action="/cliente/d">
+					<input type="hidden" name="idCliente" th:value="${cliente.id}" />
+					<button onclick="submit()">
+						<img src="/img/icons/basura.png" height="20" width="20">
+					</button>
+				</form>
+
+				<form action="/cliente/u">
+					<input type="hidden" name="idCliente" th:value="${cliente.id}" />
+					<button onclick="submit()">
+						<img src="/img/icons/lapiz.png" height="20" width="20">
+					</button>
+				</form>
+
+			</td>
+		</tr>
+
+
+	</table>
+
+</div>

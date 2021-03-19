@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<script src="/js/jquery-3.2.1.slim.min.js" ></script>
+	<script src="/js/popper.min.js" ></script>
+	<script src="/js/bootstrap.min.js" ></script>
+	<meta charset="UTF-8">
+<title th:if="${_title != null}" th:text="${_title}"></title>
+<title th:if="${_title == null}" th:text="HOTEL"></title>
+</head>
+<body>
+
