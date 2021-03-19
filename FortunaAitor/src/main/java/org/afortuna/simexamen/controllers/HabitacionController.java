@@ -27,6 +27,7 @@ public class HabitacionController {
 		m.put("view","habitacion/cGet");
 		return "/_t/frame";
 	}
+	//Prueba dos
 	
 	@PostMapping("c")
 	public String habitacionCPost(
