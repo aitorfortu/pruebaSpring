@@ -44,7 +44,7 @@ public class ClienteController {
 		return "redirect:/cliente/r";
 		
 	}
-	
+	//Comentario prueba
 	@GetMapping("/cliente/r")
 	public String clienteRGet(
 			ModelMap m
